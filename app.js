@@ -81,14 +81,14 @@ app.use((req, res, next) => {
     next();
 })
 //Mounting all routers
-app.get('/', (req, res, next)=>{
-    res.status(200).render('email/passwordReset', {
-        type:'confirmed_deposit',
-        firstName:"Godwin",
-        subject:"Welcome mail",
-        url:"http://localhost:5174/users/resetPassword"
-    })
-})
+// app.get('/', (req, res, next)=>{
+//     res.status(200).render('email/passwordReset', {
+//         type:'confirmed_deposit',
+//         firstName:"Godwin",
+//         subject:"Welcome mail",
+//         url:"http://localhost:5174/users/resetPassword"
+//     })
+// })
 app.use('/api/v1/transactions', transactionRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/plans',  upload.none(), planRouter);
