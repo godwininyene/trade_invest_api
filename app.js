@@ -41,29 +41,29 @@ const upload = multer();
 
 //Implement cors
 // app.use(cors())
-// app.use(cors({
-//   origin: process.env.FRONTEND_URL,
-//   credentials: true,               // Allow credentials such as cookies
-// }));
-
-
 app.use(cors({
-    origin: 'https://trade-invest-ten.vercel.app',
-    credentials: true,               // Allow credentials such as cookies
-  }));
+  origin: process.env.FRONTEND_URL,
+  credentials: true,               // Allow credentials such as cookies
+}));
+
+
+// app.use(cors({
+//     origin: 'https://trade-invest-ten.vercel.app',
+//     credentials: true,               // Allow credentials such as cookies
+//   }));
 
 
 
-// app.options('*', cors())
-// app.options('*', cors({
-//     origin: process.env.FRONTEND_URL,
-//     credentials: true,
-// }));
-
+app.options('*', cors())
 app.options('*', cors({
-    origin: 'https://trade-invest-ten.vercel.app',
+    origin: process.env.FRONTEND_URL,
     credentials: true,
 }));
+
+// app.options('*', cors({
+//     origin: 'https://trade-invest-ten.vercel.app',
+//     credentials: true,
+// }));
 
 
 //Set Security HTTP Headers

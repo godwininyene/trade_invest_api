@@ -27,23 +27,9 @@ const upload = multer({
 
 exports.uploadReceipt = upload.single("receipt");
 exports.resizeReceipt = catchAsync(async(req, res, next)=>{
-    
-    // if(!req.file) return next();
-
-    // req.file.filename = `receipt-${req.user._id}-${Date.now()}.jpeg`;
-
-    // await sharp(req.file.buffer)
-    //     // .resize(800, 600)
-    //     .toFormat("jpeg")
-    //     .jpeg({quality: 30})
-    //     .toFile(`public/img/receipts/${req.file.filename}`);
-
-    // next()
-
     if (!req.file) return next();
 
     const processedImageBuffer = await sharp(req.file.buffer)
-        // .resize(800, 600)
         .toFormat("jpeg")
         .jpeg({ quality: 30 })
         .toBuffer();
