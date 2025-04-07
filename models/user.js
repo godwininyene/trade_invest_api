@@ -42,23 +42,23 @@ const userSchema = new mongoose.Schema({
     //     }
     // },
 
-    reason:{
-        type:String,
-        required:[true, "Please provide reason for opening account"],
-        enum:{
-            values:['Income Earning', 'Hedging', 'Speculative'],
-             message:'Reason is either: Income Earning, Hedging or Speculative. Got {VALUE}'
-        }
-    },
+    // reason:{
+    //     type:String,
+    //     required:[true, "Please provide reason for opening account"],
+    //     enum:{
+    //         values:['Income Earning', 'Hedging', 'Speculative'],
+    //          message:'Reason is either: Income Earning, Hedging or Speculative. Got {VALUE}'
+    //     }
+    // },
     firstAddress:{
         type:String,
         required:[true, 'Please provide your first line of address']
     },
-    secondAddress:String,
-    townCity:{
-        type:String,
-        required:[true, 'Please provide your town/city/region']
-    },
+    // secondAddress:String,
+    // townCity:{
+    //     type:String,
+    //     required:[true, 'Please provide your town/city/region']
+    // },
     photo:String,
 
     role:{
