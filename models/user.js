@@ -33,14 +33,14 @@ const userSchema = new mongoose.Schema({
              message:'Gender is either: Male or Female. Got {VALUE}'
         }
     },
-    employmentStatus:{
-        type:String,
-        required:[true, "Please provide your employment status"],
-        enum:{
-            values:['Employed', 'Self-Employed', 'Pensioner', 'Student', 'Unemployed'],
-             message:'Reason is either: Employed, Self-Employed, Pensioner, Student, Unemployed. Got {VALUE}'
-        }
-    },
+    // employmentStatus:{
+    //     type:String,
+    //     required:[true, "Please provide your employment status"],
+    //     enum:{
+    //         values:['Employed', 'Self-Employed', 'Pensioner', 'Student', 'Unemployed'],
+    //          message:'Reason is either: Employed, Self-Employed, Pensioner, Student, Unemployed. Got {VALUE}'
+    //     }
+    // },
 
     reason:{
         type:String,

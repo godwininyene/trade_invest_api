@@ -51,7 +51,7 @@ exports.signup = catchAsync(async(req, res, next)=>{
             passwordConfirm:req.body.passwordConfirm,
             reason:req.body.reason,
             country: req.body.country,
-            employmentStatus:req.body.employmentStatus,
+            // employmentStatus:req.body.employmentStatus,
     
             firstAddress: req.body.firstAddress,
             secondAddress:req.body.secondAddress,
